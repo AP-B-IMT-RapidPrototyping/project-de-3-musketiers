@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ch7cuq6yaxcly"]
+
+[ext_resource type="PackedScene" uid="uid://0gpweoitehjw" path="res://cengiz/zombiestand.glb" id="1_gk23f"]
+[ext_resource type="PackedScene" path="res://rhune/map.tscn" id="2_3syr8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fdnss"]
+radius = 0.32128906
+height = 0.96435547
+
+[node name="zombiestand" unique_id=1887496057 instance=ExtResource("1_gk23f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.55603063, 0)
+
+[node name="Map" parent="." index="2" unique_id=1726164629 instance=ExtResource("2_3syr8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.121260166, 0.105231285, 0.013146162)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="3" unique_id=1008476759]
+transform = Transform3D(4.1133714, 0, 0, 0, 2.3326526, 0, 0, 0, 1.2362763, 0, 0.924689, 0)
+shape = SubResource("CapsuleShape3D_fdnss")
