@@ -1,12 +1,19 @@
 [gd_scene format=3 uid="uid://fkqtxkvtb11h"]
 
 [ext_resource type="PackedScene" uid="uid://cumhc5yhqp8pn" path="res://rhune/map.tscn" id="1_ryna2"]
-[ext_resource type="PackedScene" path="res://yusuf/player.tscn" id="2_vugaj"]
+[ext_resource type="PackedScene" uid="uid://difqk0sxk8eio" path="res://yusuf/player.tscn" id="2_vugaj"]
+[ext_resource type="PackedScene" uid="uid://dbhw0ryl37iwb" path="res://rhune/Gun.tscn" id="3_vugaj"]
 
 [node name="Test" type="Node3D" unique_id=707405815]
 
 [node name="Map" parent="." unique_id=1726164629 instance=ExtResource("1_ryna2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5766951, 0, -0.84956765)
 
+[node name="Gun" parent="." unique_id=1469635960 node_paths=PackedStringArray("_weaponMount") instance=ExtResource("3_vugaj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9511573, 1.4794911, 0.6050384)
+_weaponMount = NodePath("../player/Camera3D/WeaponMount")
+
 [node name="player" parent="." unique_id=1007684587 instance=ExtResource("2_vugaj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33474362, 0.6606995, -1.385838)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.7158488, 1.4862267, -6.5168843)
+
+[editable path="player"]

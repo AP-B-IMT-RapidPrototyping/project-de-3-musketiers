@@ -9,7 +9,7 @@ _fireRateTimer = NodePath("FireRateTimer")
 _muzzle = NodePath("Muzzle")
 
 [node name="blaster-d2" parent="." unique_id=1010146785 instance=ExtResource("1_ctk0t")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.1900326, -1.1920929e-07, 1.3499002)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 
 [node name="FireRateTimer" type="Timer" parent="." unique_id=303666826]
 wait_time = 0.2
@@ -17,4 +17,4 @@ one_shot = true
 autostart = true
 
 [node name="Muzzle" type="Marker3D" parent="." unique_id=1094259035]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18878108, 0.015028328, 1.2204875)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017962098, -0.12858453)
