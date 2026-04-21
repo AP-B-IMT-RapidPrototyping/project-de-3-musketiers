@@ -3,9 +3,10 @@ using System;
 
 public partial class Player : CharacterBody3D
 {
+    [Export] private RayCast3D _aimRaycast;
+	[Signal]
+    public delegate void ShootEventHandler(RayCast3D raycast);
 
-	  [Signal]
-    public delegate void ShootEventHandler();
 
 	[Export] private float _mouseSensitivity = 0.003f;
 
@@ -22,7 +23,8 @@ public partial class Player : CharacterBody3D
     {
         if (Input.IsActionJustPressed("shoot"))
         {
-            EmitSignal(SignalName.Shoot);
+          EmitSignal(SignalName.Shoot, _aimRaycast);
+        GD.Print($"Hit: {_aimRaycast.GetCollisionPoint()}");
         }
     }
 
