@@ -7,21 +7,21 @@
 
 [node name="Node3D" type="Node3D" unique_id=1522196776]
 
+[node name="Gun" parent="." unique_id=1469635960 node_paths=PackedStringArray("_weaponMount") instance=ExtResource("3_ftnuk")]
+transform = Transform3D(-0.96736443, 0.032540977, 0.2512903, 0.03818887, 0.99911493, 0.017630037, -0.25049406, 0.026651155, -0.9677509, -0.20652801, 0.12574825, 1.897622)
+_weaponMount = NodePath("../player/Camera3D/WeaponMount")
+
+[node name="Muzzle" parent="Gun" index="2" unique_id=1094259035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03805262, -0.13808516, 1.2204875)
+
 [node name="Map" parent="." unique_id=1726164629 instance=ExtResource("1_72aeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.070155025, 0, -0.23789)
 
 [node name="player" parent="." unique_id=1007684587 instance=ExtResource("2_ftnuk")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.40473485, 0, 2.0940423)
 
-[node name="Gun" parent="player/Camera3D/WeaponMount" parent_id_path=PackedInt32Array(1007684587, 1264584667) index="0" unique_id=1469635960 node_paths=PackedStringArray("_weaponMount") instance=ExtResource("3_ftnuk")]
-transform = Transform3D(-0.801998, -0.5656231, 0.1920136, -0.54226494, 0.8242328, 0.16305953, -0.2504941, 0.02665117, -0.96775097, 0, 0, 0)
-_weaponMount = NodePath("..")
-
-[node name="Muzzle" parent="player/Camera3D/WeaponMount/Gun" index="2" unique_id=1094259035]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03805262, -0.13808516, 1.2204875)
-
 [node name="Target" parent="." unique_id=2014950769 instance=ExtResource("4_3vpxg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6945746, 0.3062882, -0.45399964)
 
+[editable path="Gun"]
 [editable path="player"]
-[editable path="player/Camera3D/WeaponMount/Gun"]
