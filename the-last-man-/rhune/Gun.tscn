@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://by8j12kvyybuq" path="res://rhune/Gun.cs" id="1_c0uqk"]
 [ext_resource type="PackedScene" uid="uid://bogh456kcsivi" path="res://assets/kenney_blaster-kit_2.1/Models/GLB format/blaster-d.glb" id="1_ctk0t"]
 
-[node name="Gun" type="Node3D" unique_id=1469635960]
+[node name="Gun" type="Node3D" unique_id=1469635960 node_paths=PackedStringArray("_muzzle", "_fireRateTimer")]
 script = ExtResource("1_c0uqk")
+_muzzle = NodePath("Muzzle")
+_fireRateTimer = NodePath("FireRateTimer")
 
 [node name="blaster-d2" parent="." unique_id=1010146785 instance=ExtResource("1_ctk0t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1900326, -1.1920929e-07, 1.3499002)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.1900326, -1.1920929e-07, 1.3499002)
 
 [node name="FireRateTimer" type="Timer" parent="." unique_id=303666826]
 wait_time = 0.2
