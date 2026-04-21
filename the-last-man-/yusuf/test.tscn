@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cumhc5yhqp8pn" path="res://rhune/map.tscn" id="1_72aeu"]
 [ext_resource type="PackedScene" uid="uid://difqk0sxk8eio" path="res://yusuf/player.tscn" id="2_ftnuk"]
 [ext_resource type="PackedScene" uid="uid://dbhw0ryl37iwb" path="res://rhune/Gun.tscn" id="3_ftnuk"]
+[ext_resource type="PackedScene" uid="uid://dknvkm4yuy0at" path="res://cengiz/target.tscn" id="4_3vpxg"]
 
 [node name="Node3D" type="Node3D" unique_id=1522196776]
 
@@ -18,6 +19,9 @@ _weaponMount = NodePath("..")
 
 [node name="Muzzle" parent="player/Camera3D/WeaponMount/Gun" index="2" unique_id=1094259035]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03805262, -0.13808516, 1.2204875)
+
+[node name="Target" parent="." unique_id=2014950769 instance=ExtResource("4_3vpxg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6945746, 0.3062882, -0.45399964)
 
 [editable path="player"]
 [editable path="player/Camera3D/WeaponMount/Gun"]
