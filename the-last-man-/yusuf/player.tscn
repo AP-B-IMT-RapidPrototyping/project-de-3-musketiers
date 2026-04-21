@@ -14,7 +14,7 @@ _camera = NodePath("Camera3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 
 [node name="AimRaycast" type="RayCast3D" parent="Camera3D" unique_id=1657116973]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5789046)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.038493097, -0.15089773)
 target_position = Vector3(0, 0, -100)
 
 [node name="WeaponMount" type="Node3D" parent="Camera3D" unique_id=1264584667]
