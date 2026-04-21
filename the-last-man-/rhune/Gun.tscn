@@ -9,7 +9,7 @@ _muzzle = NodePath("Muzzle")
 _fireRateTimer = NodePath("FireRateTimer")
 
 [node name="blaster-d2" parent="." unique_id=1010146785 instance=ExtResource("1_ctk0t")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.1900326, -1.1920929e-07, 1.3499002)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.1900326, -1.1920929e-07, 1.3499002)
 
 [node name="FireRateTimer" type="Timer" parent="." unique_id=303666826]
 wait_time = 0.2
