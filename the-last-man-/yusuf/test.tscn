@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cumhc5yhqp8pn" path="res://rhune/map.tscn" id="1_72aeu"]
 [ext_resource type="PackedScene" uid="uid://difqk0sxk8eio" path="res://yusuf/player.tscn" id="2_ftnuk"]
 [ext_resource type="PackedScene" uid="uid://dbhw0ryl37iwb" path="res://rhune/Gun.tscn" id="3_ftnuk"]
-[ext_resource type="PackedScene" uid="uid://dknvkm4yuy0at" path="res://cengiz/target.tscn" id="4_3vpxg"]
+[ext_resource type="PackedScene" path="res://cengiz/main spawn.tscn" id="4_3vpxg"]
 
 [node name="Node3D" type="Node3D" unique_id=1522196776]
 
@@ -20,10 +20,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.070155025, 0, -0.23789)
 [node name="player" parent="." unique_id=1007684587 instance=ExtResource("2_ftnuk")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.40473485, 0, 2.0940423)
 
-[node name="Target" parent="." unique_id=2014950769 instance=ExtResource("4_3vpxg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6945746, 0.3062882, -0.45399964)
+[node name="MainSpawn" parent="." unique_id=1460653224 instance=ExtResource("4_3vpxg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.98768055, 0.029785156, -0.36161053)
+
+[node name="spawnpoint1" parent="MainSpawn" index="0" unique_id=800513651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.947293, 0.20552877, 16.403257)
+
+[node name="spawnpoint2" parent="MainSpawn" index="1" unique_id=1080078894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3889008, 0.5666164, 16.780504)
+
+[node name="spawnpoint3" parent="MainSpawn" index="2" unique_id=829157968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.459242, -2.4392385, -38.027084)
 
 [connection signal="Shoot" from="player" to="Gun" method="OnShoot"]
 
 [editable path="Gun"]
 [editable path="player"]
+[editable path="MainSpawn"]
