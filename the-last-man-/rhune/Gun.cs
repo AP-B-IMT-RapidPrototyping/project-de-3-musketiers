@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class Railgun : Node3D
+public partial class Gun : Node3D
 {
     [Export] private Timer _fireRateTimer;
     [Export] private Node3D _weaponMount;
