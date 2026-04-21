@@ -13,10 +13,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.070155025, 0, -0.23789)
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.40473485, 0, 2.0940423)
 
 [node name="Gun" parent="." unique_id=1469635960 node_paths=PackedStringArray("_weaponMount") instance=ExtResource("3_ftnuk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15760137, 1.0853591, 2.5286975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4564769, 1.3817527, 0.82897735)
 _weaponMount = NodePath("../player/Camera3D/WeaponMount")
-
-[connection signal="Shoot" from="player" to="Gun" method="OnShoot"]
 
 [editable path="player"]
 [editable path="Gun"]
