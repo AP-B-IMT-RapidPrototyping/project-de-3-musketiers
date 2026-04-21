@@ -4,9 +4,10 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j8wi0"]
 
-[node name="player" type="CharacterBody3D" unique_id=1007684587 node_paths=PackedStringArray("_camera")]
+[node name="player" type="CharacterBody3D" unique_id=1007684587 node_paths=PackedStringArray("_aimRaycast", "_camera")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 script = ExtResource("1_oluup")
+_aimRaycast = NodePath("Camera3D/AimRaycast")
 _camera = NodePath("Camera3D")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1279960831]
@@ -17,7 +18,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5789046)
 target_position = Vector3(0, 0, -100)
 
 [node name="WeaponMount" type="Node3D" parent="Camera3D" unique_id=1264584667]
-transform = Transform3D(-0.845262, -0.53435236, -8.742277e-08, -0.53435236, 0.845262, 0, 7.3895144e-08, 4.6714568e-08, -0.99999994, 0.49139607, 0.083796486, -0.9362463)
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 0.99999994, 0.19820684, -0.015789881, -0.31435776)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=466394300]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
