@@ -1,3 +1,4 @@
+using System.Runtime;
 using Godot;
 
 
@@ -13,7 +14,7 @@ public partial class Gun : Node3D
         GlobalTransform = _weaponMount.GlobalTransform;
     }
 
-    public void OnShoot()
+    public void OnShoot(RayCast3D raycast)
     {
         if (!_fireRateTimer.IsStopped())
             return;
@@ -21,8 +22,14 @@ public partial class Gun : Node3D
 
         _fireRateTimer.Start();
 
-        Vector3 beamEnd = _muzzle.GlobalPosition - _muzzle.GlobalBasis.Z * 100;
+        Vector3 beamEnd = raycast.IsColliding()
+        ? raycast.GetCollisionPoint()
+        : _muzzle.GlobalPosition - raycast.GlobalBasis.Z * 100;
+
         ShowBeam(_muzzle.GlobalPosition, beamEnd);
+
+        if (raycast.GetCollider() is Target targetHit)
+            targetHit.OnHit();
 
         GD.Print("Railgun Fired!");
     }
