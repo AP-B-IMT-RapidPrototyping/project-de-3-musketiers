@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bblco5dfhilde"]
+
+[ext_resource type="PackedScene" uid="uid://cumhc5yhqp8pn" path="res://rhune/map.tscn" id="1_72aeu"]
+[ext_resource type="PackedScene" uid="uid://difqk0sxk8eio" path="res://yusuf/player.tscn" id="2_ftnuk"]
+
+[node name="Node3D" type="Node3D" unique_id=1522196776]
+
+[node name="Map" parent="." unique_id=1726164629 instance=ExtResource("1_72aeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.070155025, 0, -0.23789)
+
+[node name="player" parent="." unique_id=1007684587 instance=ExtResource("2_ftnuk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40473485, 0, 2.0940423)
