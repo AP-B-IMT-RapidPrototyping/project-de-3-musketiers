@@ -17,7 +17,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5789046)
 target_position = Vector3(0, 0, -100)
 
 [node name="WeaponMount" type="Node3D" parent="Camera3D" unique_id=1264584667]
-transform = Transform3D(0.32619166, 0.20620981, -0.922538, -0.53435224, 0.8452619, 0, 0.77978617, 0.49296036, 0.385906, 0.09776887, 0.09308429, -1.2)
+transform = Transform3D(-0.845262, -0.53435236, -8.742277e-08, -0.53435236, 0.845262, 0, 7.3895144e-08, 4.6714568e-08, -0.99999994, 0.49139607, 0.083796486, -0.9362463)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=466394300]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
