@@ -4,6 +4,9 @@ using System;
 public partial class Player : CharacterBody3D
 {
 
+	  [Signal]
+    public delegate void ShootEventHandler();
+
 	[Export] private float _mouseSensitivity = 0.003f;
 
 	[Export] private Camera3D _camera;
@@ -13,6 +16,14 @@ public partial class Player : CharacterBody3D
 	 public override void _Ready()
     {
         Input.MouseMode = Input.MouseModeEnum.Captured;
+    }
+
+	 public override void _Process(double delta)
+    {
+        if (Input.IsActionJustPressed("shoot"))
+        {
+            EmitSignal(SignalName.Shoot);
+        }
     }
 
 	public override void _PhysicsProcess(double delta)
