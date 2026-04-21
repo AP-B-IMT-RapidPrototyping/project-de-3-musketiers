@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://difqk0sxk8eio"]
 
+[ext_resource type="Script" uid="uid://cb04jtfh2mvuf" path="res://yusuf/Player.cs" id="1_oluup"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j8wi0"]
 
-[node name="player" type="CharacterBody3D" unique_id=1007684587]
+[node name="player" type="CharacterBody3D" unique_id=1007684587 node_paths=PackedStringArray("_camera")]
+script = ExtResource("1_oluup")
+_camera = NodePath("Camera3D")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1279960831]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
