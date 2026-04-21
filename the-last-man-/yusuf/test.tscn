@@ -23,7 +23,7 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.40473485, 0, 2.09404
 [node name="Target" parent="." unique_id=2014950769 instance=ExtResource("4_3vpxg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6945746, 0.3062882, -0.45399964)
 
-[connection signal="Shoot" from="player" to="player" method="_on_shoot"]
+[connection signal="Shoot" from="player" to="Gun" method="OnShoot"]
 
 [editable path="Gun"]
 [editable path="player"]
