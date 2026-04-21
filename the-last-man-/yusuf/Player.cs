@@ -10,7 +10,7 @@ public partial class Player : CharacterBody3D
 	[Export] private float _mouseSensitivity = 0.003f;
 
 	[Export] private Camera3D _camera;
- 	[Export] private float _Speed = 5.0f;
+ 	[Export] private float _Speed = 2.0f;
 	[Export] private float _JumpVelocity = 4.5f;
 
 	 public override void _Ready()

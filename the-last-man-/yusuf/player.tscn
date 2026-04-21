@@ -12,9 +12,6 @@ _camera = NodePath("Camera3D")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1279960831]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 
-[node name="WeaponMount" type="Node3D" parent="Camera3D" unique_id=1264584667]
-transform = Transform3D(0.32619166, 0.2062098, -0.922538, -0.53435224, 0.8452619, 0, 0.77978617, 0.49296036, 0.385906, 0.8, -1, -1.2)
-
 [node name="AimRaycast" type="RayCast3D" parent="Camera3D" unique_id=1657116973]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5789046)
 target_position = Vector3(0, 0, -100)
@@ -22,3 +19,6 @@ target_position = Vector3(0, 0, -100)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=466394300]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_j8wi0")
+
+[node name="WeaponMount" type="Node3D" parent="." unique_id=1264584667]
+transform = Transform3D(3.2619166, 2.062098, -9.22538, -5.3435225, 8.452619, 0, 7.7978616, 4.9296036, 3.85906, 0.9776887, 2.530843, -12)

@@ -13,8 +13,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.070155025, 0, -0.23789)
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.40473485, 0, 2.0940423)
 
 [node name="Gun" parent="." unique_id=1469635960 node_paths=PackedStringArray("_weaponMount") instance=ExtResource("3_ftnuk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4564769, 1.3817527, 0.82897735)
-_weaponMount = NodePath("../player/Camera3D/WeaponMount")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032006502, 0.08900091, -1.5367848)
+_weaponMount = NodePath("../player/WeaponMount")
+
+[node name="Muzzle" parent="Gun" index="2" unique_id=1094259035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03805262, -0.13808516, 1.2204875)
 
 [editable path="player"]
 [editable path="Gun"]
