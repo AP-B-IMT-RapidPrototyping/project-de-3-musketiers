@@ -10,7 +10,7 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.070155025, 0, -0.23789)
 
 [node name="player" parent="." unique_id=1007684587 instance=ExtResource("2_ftnuk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40473485, 0, 2.0940423)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.40473485, 0, 2.0940423)
 
 [node name="Gun" parent="." unique_id=1469635960 node_paths=PackedStringArray("_weaponMount") instance=ExtResource("3_ftnuk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15760137, 1.0853591, 2.5286975)
