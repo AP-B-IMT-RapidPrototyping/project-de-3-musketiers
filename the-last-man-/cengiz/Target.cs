@@ -1,5 +1,6 @@
 using Godot;
 
+[GlobalClass]
 public partial class Target : RigidBody3D
 {
 	[Export] private Node3D _root;

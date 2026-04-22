@@ -1,19 +1,15 @@
 [gd_scene format=3 uid="uid://dknvkm4yuy0at"]
 
 [ext_resource type="PackedScene" uid="uid://486vudi7jk7j" path="res://assets/kenney_blaster-kit_2.1/Models/GLB format/target-large.glb" id="1_niylx"]
-[ext_resource type="Script" uid="uid://f43bxe7gvsji" path="res://cengiz/RigidBody3d.cs" id="1_qolsc"]
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_qolsc"]
-height = 1.2
+[ext_resource type="Script" uid="uid://f43bxe7gvsji" path="res://cengiz/Target.cs" id="1_qolsc"]
 
 [node name="Target" type="Node3D" unique_id=2014950769]
 
-[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=871864445]
-script = ExtResource("1_qolsc")
-
-[node name="target-large2" parent="RigidBody3D" unique_id=1771136264 instance=ExtResource("1_niylx")]
+[node name="target-large2" parent="." unique_id=520311292 instance=ExtResource("1_niylx")]
 transform = Transform3D(0.9674287, 0, 0, 0, 0.70282745, 0, 0, 0, 0.7169505, -0.011635095, 0.06349695, 0.007235408)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1851350598]
-transform = Transform3D(0.49968278, 0.017807318, 0, -0.017807318, 0.49968278, 0, 0, 0, 0.5, 0, 0.06402439, 0)
-shape = SubResource("CylinderShape3D_qolsc")
+[node name="target-large" parent="target-large2" index="0" unique_id=540556856 node_paths=PackedStringArray("_root")]
+script = ExtResource("1_qolsc")
+_root = NodePath("../..")
+
+[editable path="target-large2"]

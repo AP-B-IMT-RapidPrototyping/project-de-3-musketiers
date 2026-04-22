@@ -18,3 +18,5 @@ autostart = true
 
 [node name="Muzzle" type="Marker3D" parent="." unique_id=1094259035]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017962098, -0.12858453)
+
+[editable path="blaster-d2"]
