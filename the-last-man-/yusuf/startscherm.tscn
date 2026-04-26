@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://drlh6beo8f6bk"]
+
+[ext_resource type="Script" uid="uid://d0rctumsyrr7k" path="res://yusuf/MenuItems.cs" id="1_73jf2"]
+
+[sub_resource type="TextMesh" id="TextMesh_ifcgm"]
+text = "START"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_et4xe"]
+size = Vector3(0.49072266, 0.19458008, 0.1784668)
+
+[sub_resource type="TextMesh" id="TextMesh_gc4n3"]
+text = "QUIT"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i2bqd"]
+size = Vector3(0.41423035, 0.19290924, 0.14978027)
+
+[node name="Startscherm" type="Node3D" unique_id=924255510]
+
+[node name="MenuItems" type="Node3D" parent="." unique_id=1297420320 node_paths=PackedStringArray("_animationPlayer")]
+script = ExtResource("1_73jf2")
+_animationPlayer = NodePath("AnimationPlayer")
+
+[node name="START" type="MeshInstance3D" parent="MenuItems" unique_id=1922225179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6057458, 0, 0)
+mesh = SubResource("TextMesh_ifcgm")
+
+[node name="Area3D" type="Area3D" parent="MenuItems/START" unique_id=1790790537]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MenuItems/START/Area3D" unique_id=1564021333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016533911, 0.020915031, 0.008666992)
+shape = SubResource("BoxShape3D_et4xe")
+
+[node name="QUIT" type="MeshInstance3D" parent="MenuItems" unique_id=1003171151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09903073, 0, 0)
+mesh = SubResource("TextMesh_gc4n3")
+
+[node name="Area3D" type="Area3D" parent="MenuItems/QUIT" unique_id=490536448]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MenuItems/QUIT/Area3D" unique_id=667276320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016548157, -0.003353119, 0.00592041)
+shape = SubResource("BoxShape3D_i2bqd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuItems" unique_id=1919937081]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2030605450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27365315, 0, 0.8244013)
+
+[node name="Control" type="Control" parent="." unique_id=484002260]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1988239876]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 642.0
+color = Color(1, 1, 1, 0.5568628)
+
+[node name="start" type="Button" parent="Control/ColorRect" unique_id=1454967342]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 410.0
+offset_right = 308.0
+offset_bottom = 459.0
+text = "START"
+
+[node name="tutorial" type="Button" parent="Control/ColorRect" unique_id=1204137236]
+layout_mode = 0
+offset_left = 843.0
+offset_top = 415.0
+offset_right = 972.0
+offset_bottom = 469.0
+text = "TUTORIAL"
+
+[node name="back" type="Button" parent="Control/ColorRect" unique_id=1435082013]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.016
+offset_left = 540.0
+offset_top = 507.0
+offset_right = 640.536
+offset_bottom = 561.0
+text = "BACK"
+
+[node name="Label" type="Label" parent="Control/ColorRect" unique_id=1776978425]
+modulate = Color(1, 1, 1, 0.99215686)
+self_modulate = Color(1, 1, 1, 0.9254902)
+layout_mode = 0
+offset_left = 466.0
+offset_top = 90.0
+offset_right = 670.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(1, 0.96862745, 0.9607843, 0.972549)
+text = "selecteer u start optie "
+
+[connection signal="pressed" from="Control/ColorRect/start" to="MenuItems" method="Game"]
+[connection signal="pressed" from="Control/ColorRect/tutorial" to="MenuItems" method="Tutorial"]
+[connection signal="pressed" from="Control/ColorRect/back" to="MenuItems" method="Back"]
