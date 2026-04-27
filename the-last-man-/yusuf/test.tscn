@@ -12,9 +12,6 @@
 transform = Transform3D(-0.96736443, 0.032540977, 0.2512903, 0.03818887, 0.99911493, 0.017630037, -0.25049406, 0.026651155, -0.9677509, -0.20652801, 0.12574825, 1.897622)
 _weaponMount = NodePath("../player/Camera3D/WeaponMount")
 
-[node name="Muzzle" parent="Gun" index="2" unique_id=1094259035]
-transform = Transform3D(1.0000001, -9.313226e-10, -1.4901161e-08, 0, 1, -1.8626451e-09, 1.4901161e-08, 1.8626451e-09, 1.0000001, 0.007268995, -0.11379877, -0.2540238)
-
 [node name="Map" parent="." unique_id=1726164629 instance=ExtResource("1_72aeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.070155025, 0, -0.23789)
 

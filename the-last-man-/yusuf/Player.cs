@@ -3,30 +3,36 @@ using System;
 
 public partial class Player : CharacterBody3D
 {
-    [Export] private RayCast3D _aimRaycast;
+	[Export] private RayCast3D _aimRaycast;
 	[Signal]
-    public delegate void ShootEventHandler(RayCast3D raycast);
+	public delegate void ShootEventHandler(RayCast3D raycast);
 
 
 	[Export] private float _mouseSensitivity = 0.003f;
 
 	[Export] private Camera3D _camera;
- 	[Export] private float _Speed = 2.0f;
+	[Export] private float _Speed = 2.0f;
 	[Export] private float _JumpVelocity = 4.5f;
 
-	 public override void _Ready()
-    {
-        Input.MouseMode = Input.MouseModeEnum.Captured;
-    }
+	public override void _Ready()
+	{
+		Input.MouseMode = Input.MouseModeEnum.Captured;
+	}
 
-	 public override void _Process(double delta)
-    {
-        if (Input.IsActionJustPressed("shoot"))
-        {
-          EmitSignal(SignalName.Shoot, _aimRaycast);
-        GD.Print($"Hit: {_aimRaycast.GetCollisionPoint()}");
-        }
-    }
+	public override void _Process(double delta)
+	{
+		if (Input.IsActionJustPressed("shoot"))
+		{
+			EmitSignal(SignalName.Shoot, _aimRaycast);
+			var collider = _aimRaycast.GetCollider();
+			if (collider is CollisionObject3D)
+			{
+				var col3D = collider as CollisionObject3D;
+				GD.Print($"Hit: {col3D.Name}");
+				GD.Print($"Hit: {col3D.GetParent().Name}");
+			}
+		}
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -62,23 +68,23 @@ public partial class Player : CharacterBody3D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
-	
-	public override void _Input(InputEvent @event)
-    {
-        // Check of dit een mouse motion event is
-        if (@event is InputEventMouseMotion mouseMotion)
-        {
-               // Horizontal rotation: roteer de HELE speler (Y-axis)
-            this.RotateY(-mouseMotion.Relative.X * _mouseSensitivity);
 
-            // Vertical rotation: roteer alleen de CAMERA (X-axis)
-            _camera.RotateX(-mouseMotion.Relative.Y * _mouseSensitivity);
+	public override void _Input(InputEvent @event)
+	{
+		// Check of dit een mouse motion event is
+		if (@event is InputEventMouseMotion mouseMotion)
+		{
+			// Horizontal rotation: roteer de HELE speler (Y-axis)
+			this.RotateY(-mouseMotion.Relative.X * _mouseSensitivity);
+
+			// Vertical rotation: roteer alleen de CAMERA (X-axis)
+			_camera.RotateX(-mouseMotion.Relative.Y * _mouseSensitivity);
 
 			// Voorkom dat de camera omdraait (clamp tussen -86° en +86°, of -1.5 en 1.5 radialen)
-            Vector3 cameraRotation = _camera.Rotation;
-            cameraRotation.X = Mathf.Clamp(cameraRotation.X, -1.5f, 1.5f);
-            _camera.Rotation = cameraRotation;
+			Vector3 cameraRotation = _camera.Rotation;
+			cameraRotation.X = Mathf.Clamp(cameraRotation.X, -1.5f, 1.5f);
+			_camera.Rotation = cameraRotation;
 
-        }
-    }
+		}
+	}
 }

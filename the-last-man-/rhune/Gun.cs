@@ -30,11 +30,19 @@ public partial class Gun : Node3D
         // Teken de beam naar het hit point
         ShowBeam(_muzzle.GlobalPosition, beamEnd);
 
+
+        var collider = raycast.GetCollider();
+        GD.Print($"1. Collider: {raycast.GetCollider()}");
         // Check target hit
-        if (raycast.GetCollider() != null)
+        if (collider != null && collider is CollisionObject3D)
         {
-            // targetHit.OnHit();
-            GD.Print(raycast.GetCollider());
+            GD.Print($"1. CollisionObject3D: {raycast.GetCollider()}");
+            var col3D = collider as CollisionObject3D;
+            if (col3D is Target)
+            {
+                (col3D as Target).OnHit();
+                GD.Print($"1. Target: {raycast.GetCollider()}");
+            }
         }
 
         GD.Print("Railgun fired!");
