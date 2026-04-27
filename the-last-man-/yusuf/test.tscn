@@ -39,7 +39,7 @@ _spawnPoints = []
 [node name="Target" parent="." unique_id=2014950769 instance=ExtResource("5_hwxs6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4596791, 0.18659368, -0.17387824)
 
-[node name="target-large" parent="Target/target-large2" parent_id_path=PackedInt32Array(2014950769, 520311292) index="0" unique_id=540556856]
+[node name="target-large" parent="Target/target-large2" parent_id_path=PackedInt32Array(2014950769, 520311292) index="0" unique_id=779969040]
 collision_layer = 3
 
 [connection signal="Shoot" from="player" to="Gun" method="OnShoot"]
