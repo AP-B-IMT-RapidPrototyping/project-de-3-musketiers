@@ -3,11 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://0gpweoitehjw" path="res://cengiz/zombiestand.glb" id="1_6vgws"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wv7xm"]
-height = 2.0761719
+radius = 0.5024414
+height = 2.5429688
 
 [node name="zombiestand" unique_id=1887496057 instance=ExtResource("1_6vgws")]
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(380768086) index="0" unique_id=386566852]
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1037138940) index="0" unique_id=1643046176]
 bones/0/position = Vector3(0.15678175, -2.7691073, -93.469696)
 bones/0/rotation = Quaternion(-0.622617, -0.12548873, 0.10706575, 0.7649429)
 bones/1/rotation = Quaternion(0.021073822, -0.007327356, 0.01632465, 0.9996179)
@@ -124,5 +125,5 @@ bones/70/position = Vector3(1.061038e-06, 17.3, 1.2770212e-07)
 bones/70/rotation = Quaternion(0.40115297, 0.031475615, -0.05885448, 0.91357636)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=1747095069]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8417969, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66503906, 0)
 shape = SubResource("CapsuleShape3D_wv7xm")
