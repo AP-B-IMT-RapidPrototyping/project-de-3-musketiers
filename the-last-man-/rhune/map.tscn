@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://bl52svh234bxn" path="res://assets/kenney_city-kit-industrial_1.0/Models/GLB format/detail-tank.glb" id="26_l85o7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jcgi6"]
+sky_top_color = Color(0.054827027, 0.041150868, 0.030592095, 1)
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
@@ -53,9 +54,14 @@ albedo_color = Color(0.5294118, 0.5254902, 0.6156863, 1)
 environment = SubResource("Environment_7hw8p")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1579981491]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 11.896092, -17.288025)
-light_color = Color(1, 0.86775166, 0.81519514, 1)
+transform = Transform3D(0.80281746, -0.51634586, 0.2981124, 0, 0.49999997, 0.86602545, -0.59622484, -0.69526035, 0.4014087, 0, 11.896092, -17.288025)
+light_color = Color(0, 0, 0, 1)
+light_energy = 16.0
+light_indirect_energy = 1.235
 shadow_enabled = true
+shadow_bias = 0.0
+shadow_normal_bias = 1.722
+shadow_blur = 1.198
 
 [node name="road-straight21" parent="." unique_id=1404469827 instance=ExtResource("1_rkf46")]
 transform = Transform3D(7.1, 0, 0, 0, 1.003, 0, 0, 0, 1.003, 3.975, 0, 8)
@@ -281,7 +287,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.99
 [node name="building-a2" parent="." unique_id=1323447707 instance=ExtResource("5_7hw8p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5325084, 0.035134077, 1.1048206)
 
-[node name="StaticBody3D" parent="building-a2/building-a" parent_id_path=PackedInt32Array(1323447707, 1028253022) index="0" unique_id=1668675317]
+[node name="StaticBody3D" parent="building-a2/building-a" parent_id_path=PackedInt32Array(1323447707, 211090282) index="0" unique_id=1564092999]
 collision_layer = 3
 
 [node name="building-b2" parent="." unique_id=1219534352 instance=ExtResource("6_r3vmc")]
