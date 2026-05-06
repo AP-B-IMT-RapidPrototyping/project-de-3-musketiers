@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bd0jmsimwtyb3"]
+
+[ext_resource type="PackedScene" uid="uid://iqw2ukorenwl" path="res://Normal version Color and NormalMap/Weapons/pew.glb" id="1_p81ux"]
+[ext_resource type="Script" uid="uid://f46jdcnvn7us" path="res://gun.gd" id="2_4bkek"]
+[ext_resource type="Shader" uid="uid://b1of64xpgnqyh" path="res://gun_shader.gdshader" id="3_h2lau"]
+[ext_resource type="Texture2D" uid="uid://bjhm2fyip6q8i" path="res://Normal version Color and NormalMap/Weapons/pew_pewfinal_color.png" id="4_mgchy"]
+[ext_resource type="Texture2D" uid="uid://dtrh8w6v471tm" path="res://Normal version Color and NormalMap/Weapons/pew_pewfinal_normal.png" id="5_17s7n"]
+[ext_resource type="Shader" uid="uid://crjbhie1xrf4s" path="res://muzzle_shader.gdshader" id="6_15i4y"]
+[ext_resource type="AudioStream" uid="uid://b1lt6htgglvhh" path="res://Sound/gunempty_05.ogg" id="7_bg4hp"]
+[ext_resource type="AudioStream" uid="uid://bllxyy4tjemfc" path="res://Sound/reload_12.ogg" id="8_25spe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hvvyq"]
+render_priority = 0
+shader = ExtResource("3_h2lau")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("4_mgchy")
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.5
+shader_parameter/roughness = 0.5
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/roughness_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/texture_normal = ExtResource("5_17s7n")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d20ac"]
+angle_min = -69.99999
+angle_max = 70.000015
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="Gradient" id="Gradient_63ar3"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 0.85, 0, 0.98039216, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ki3w5"]
+gradient = SubResource("Gradient_63ar3")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y2mtp"]
+render_priority = 0
+shader = ExtResource("6_15i4y")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = SubResource("GradientTexture2D_ki3w5")
+shader_parameter/specular = 0.0
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 0.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/roughness_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_synic"]
+material = SubResource("ShaderMaterial_y2mtp")
+size = Vector2(0.05, 0.05)
+
+[node name="pew" unique_id=1802229252 instance=ExtResource("1_p81ux")]
+script = ExtResource("2_4bkek")
+
+[node name="pew" parent="." index="0" unique_id=2068706215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020019531, 0, 0)
+surface_material_override/0 = SubResource("ShaderMaterial_hvvyq")
+
+[node name="pewhaut" parent="pew" index="0" unique_id=1475227288]
+surface_material_override/0 = SubResource("ShaderMaterial_hvvyq")
+
+[node name="pewmagazine" parent="pew" index="1" unique_id=1584088723]
+surface_material_override/0 = SubResource("ShaderMaterial_hvvyq")
+
+[node name="pewtrigger" parent="pew" index="2" unique_id=528162519]
+surface_material_override/0 = SubResource("ShaderMaterial_hvvyq")
+
+[node name="Muzzle" type="GPUParticles3D" parent="." index="1" unique_id=2112568698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.060094684, 0.035588913, 0)
+emitting = false
+lifetime = 0.05
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_d20ac")
+draw_pass_1 = SubResource("QuadMesh_synic")
+
+[node name="Gunempty" type="AudioStreamPlayer" parent="Muzzle" index="0" unique_id=28752922]
+stream = ExtResource("7_bg4hp")
+
+[node name="Reload" type="AudioStreamPlayer" parent="Muzzle" index="1" unique_id=829927996]
+stream = ExtResource("8_25spe")

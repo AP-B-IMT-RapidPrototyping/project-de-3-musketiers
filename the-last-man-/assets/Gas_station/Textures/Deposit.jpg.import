@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddyrq347ehqkk"
-path.s3tc="res://.godot/imported/Deposit.jpg-e84338df4bab995d58bf83d51922967b.s3tc.ctex"
+path.s3tc="res://.godot/imported/Deposit.jpg-ef725784cd4fc2f08558c0e07824c57a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Gas_station/textures/Deposit.jpg"
-dest_files=["res://.godot/imported/Deposit.jpg-e84338df4bab995d58bf83d51922967b.s3tc.ctex"]
+source_file="res://assets/Gas_station/Textures/Deposit.jpg"
+dest_files=["res://.godot/imported/Deposit.jpg-ef725784cd4fc2f08558c0e07824c57a.s3tc.ctex"]
 
 [params]
 

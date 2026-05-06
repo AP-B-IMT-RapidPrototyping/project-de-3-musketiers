@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj77f28xkkdms"
-path.s3tc="res://.godot/imported/MetalPlates.jpg-44af028ad304043272949c7440f62dee.s3tc.ctex"
+path.s3tc="res://.godot/imported/MetalPlates.jpg-3019dd0faac9fec4454bd2b9708aaf03.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Gas_station/textures/MetalPlates.jpg"
-dest_files=["res://.godot/imported/MetalPlates.jpg-44af028ad304043272949c7440f62dee.s3tc.ctex"]
+source_file="res://assets/Gas_station/Textures/MetalPlates.jpg"
+dest_files=["res://.godot/imported/MetalPlates.jpg-3019dd0faac9fec4454bd2b9708aaf03.s3tc.ctex"]
 
 [params]
 

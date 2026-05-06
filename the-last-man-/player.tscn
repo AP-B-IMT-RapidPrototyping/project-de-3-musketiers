@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://kdnm7bnrk6xl"]
+
+[ext_resource type="Script" uid="uid://cosb82ju7qtwq" path="res://player.gd" id="1_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://cv3kpeynlhkc2" path="res://Crosshairs/3.png" id="1_sweqy"]
+[ext_resource type="Texture2D" uid="uid://d0wu4qby6r6j1" path="res://Crosshairs/22.png" id="2_2hs0m"]
+[ext_resource type="Script" uid="uid://tw3odlekivi2" path="res://camera_shake.gd" id="2_nvl01"]
+[ext_resource type="Texture2D" uid="uid://cj2ufr33bcspv" path="res://Crosshairs/19.png" id="3_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://c7e0k5w62rkuu" path="res://Crosshairs/34.png" id="4_dw050"]
+[ext_resource type="PackedScene" uid="uid://b455mjfne10na" path="res://ak_472.tscn" id="5_b26j0"]
+[ext_resource type="PackedScene" uid="uid://delhsd21kd74o" path="res://shotgun.tscn" id="6_1jxqw"]
+[ext_resource type="PackedScene" uid="uid://cgdcf7d5cyolo" path="res://mac_10.tscn" id="7_dw050"]
+[ext_resource type="PackedScene" uid="uid://bd0jmsimwtyb3" path="res://pew.tscn" id="8_dw050"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
+radius = 0.4
+height = 1.6
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ivps1"]
+fractal_octaves = 4
+fractal_lacunarity = 20.0
+fractal_gain = 0.8
+
+[sub_resource type="LabelSettings" id="LabelSettings_4flbx"]
+font_size = 30
+
+[node name="Player" type="CharacterBody3D" unique_id=227056170]
+floor_max_angle = 1.0471976
+script = ExtResource("1_n7ghd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=507754770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CapsuleShape3D_sh265")
+
+[node name="Camera Holder" type="Node3D" parent="." unique_id=1712496948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Camera Holder" unique_id=1864784721]
+near = 0.001
+script = ExtResource("2_nvl01")
+noise = SubResource("FastNoiseLite_ivps1")
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera Holder/Camera3D" unique_id=1529539053]
+target_position = Vector3(0, 0, -100)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera Holder/Camera3D" unique_id=1648641051]
+
+[node name="HUD" type="Control" parent="Camera Holder/Camera3D/CanvasLayer" unique_id=2048531856]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Ammo" type="Label" parent="Camera Holder/Camera3D/CanvasLayer/HUD" unique_id=826779549]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -95.0
+offset_top = 10.0
+offset_right = -15.0
+offset_bottom = 52.0
+grow_horizontal = 0
+text = "30/30"
+label_settings = SubResource("LabelSettings_4flbx")
+horizontal_alignment = 2
+
+[node name="Crosshairs" type="Control" parent="Camera Holder/Camera3D/CanvasLayer/HUD" unique_id=902762229]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AK47" type="TextureRect" parent="Camera Holder/Camera3D/CanvasLayer/HUD/Crosshairs" unique_id=609278984]
+self_modulate = Color(1, 1, 1, 0.5)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sweqy")
+expand_mode = 1
+
+[node name="Shotgun" type="TextureRect" parent="Camera Holder/Camera3D/CanvasLayer/HUD/Crosshairs" unique_id=359329051]
+self_modulate = Color(1, 1, 1, 0.5)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2hs0m")
+expand_mode = 1
+
+[node name="Mac10" type="TextureRect" parent="Camera Holder/Camera3D/CanvasLayer/HUD/Crosshairs" unique_id=1560813279]
+self_modulate = Color(1, 1, 1, 0.5)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_1jxqw")
+expand_mode = 1
+
+[node name="PEW" type="TextureRect" parent="Camera Holder/Camera3D/CanvasLayer/HUD/Crosshairs" unique_id=1815055072]
+self_modulate = Color(1, 1, 1, 0.5)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_dw050")
+expand_mode = 1
+
+[node name="Weapon Holder" type="Node3D" parent="Camera Holder" unique_id=1790109049]
+
+[node name="ak47" parent="Camera Holder/Weapon Holder" unique_id=482985705 instance=ExtResource("5_b26j0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.1, -0.1, -0.2)
+visible = false
+spread = 1.0
+
+[node name="shotgun" parent="Camera Holder/Weapon Holder" unique_id=993305133 instance=ExtResource("6_1jxqw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.1, -0.1, -0.17)
+visible = false
+mag_size = 30
+reload_time = 3.0
+spread = 1.0
+auto = true
+bullet_count = 1
+normal_recoil = Vector2(2, 5)
+aim_recoil = Vector2(1, 2)
+camera_shake = 0.3
+aim_speed = 2.0
+
+[node name="mac10" parent="Camera Holder/Weapon Holder" unique_id=496420819 instance=ExtResource("7_dw050")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.125, -0.05, -0.15)
+visible = false
+damage = 20.0
+fire_rate = 0.1
+mag_size = 30
+reload_time = 3.0
+camera_shake = 0.3
+normal_speed = 4.0
+aim_speed = 2.0
+height_offset = 0.1
+
+[node name="pew" parent="Camera Holder/Weapon Holder" unique_id=1802229252 instance=ExtResource("8_dw050")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.125, -0.08, -0.17)

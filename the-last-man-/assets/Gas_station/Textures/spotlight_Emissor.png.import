@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3b76d0farwqp"
-path.s3tc="res://.godot/imported/spotlight_Emissor.png-a015d481370f761b82d3deb29cd78f3a.s3tc.ctex"
+path.s3tc="res://.godot/imported/spotlight_Emissor.png-e73834f2bf479b031057814d7028e9d7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Gas_station/textures/spotlight_Emissor.png"
-dest_files=["res://.godot/imported/spotlight_Emissor.png-a015d481370f761b82d3deb29cd78f3a.s3tc.ctex"]
+source_file="res://assets/Gas_station/Textures/spotlight_Emissor.png"
+dest_files=["res://.godot/imported/spotlight_Emissor.png-e73834f2bf479b031057814d7028e9d7.s3tc.ctex"]
 
 [params]
 

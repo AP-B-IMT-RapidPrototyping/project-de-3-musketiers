@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cohuo0dybcw6i"
-path.s3tc="res://.godot/imported/Sanitary.png-1106fd3f9937704d8224b713d70f2acf.s3tc.ctex"
+path.s3tc="res://.godot/imported/Sanitary.png-7c995eec46dd41dcaad3e0df0fbdafea.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Gas_station/textures/Sanitary.png"
-dest_files=["res://.godot/imported/Sanitary.png-1106fd3f9937704d8224b713d70f2acf.s3tc.ctex"]
+source_file="res://assets/Gas_station/Textures/Sanitary.png"
+dest_files=["res://.godot/imported/Sanitary.png-7c995eec46dd41dcaad3e0df0fbdafea.s3tc.ctex"]
 
 [params]
 

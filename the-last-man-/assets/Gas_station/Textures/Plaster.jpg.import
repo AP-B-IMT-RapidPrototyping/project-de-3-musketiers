@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cop7yufq8exo0"
-path.s3tc="res://.godot/imported/Plaster.jpg-cd00eb5c9fb9d0ae437f341cb2c5b7ed.s3tc.ctex"
+path.s3tc="res://.godot/imported/Plaster.jpg-bc5d6ec04af29f199f85647cd38c906e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Gas_station/textures/Plaster.jpg"
-dest_files=["res://.godot/imported/Plaster.jpg-cd00eb5c9fb9d0ae437f341cb2c5b7ed.s3tc.ctex"]
+source_file="res://assets/Gas_station/Textures/Plaster.jpg"
+dest_files=["res://.godot/imported/Plaster.jpg-bc5d6ec04af29f199f85647cd38c906e.s3tc.ctex"]
 
 [params]
 

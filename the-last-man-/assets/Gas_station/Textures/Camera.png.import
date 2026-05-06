@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwx3x80wdxl8d"
-path.s3tc="res://.godot/imported/Camera.png-04d3d038c3b7599c328328e1eacabee2.s3tc.ctex"
+path.s3tc="res://.godot/imported/Camera.png-bbb5e8972fc5581384529baa307c3e30.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Gas_station/textures/Camera.png"
-dest_files=["res://.godot/imported/Camera.png-04d3d038c3b7599c328328e1eacabee2.s3tc.ctex"]
+source_file="res://assets/Gas_station/Textures/Camera.png"
+dest_files=["res://.godot/imported/Camera.png-bbb5e8972fc5581384529baa307c3e30.s3tc.ctex"]
 
 [params]
 

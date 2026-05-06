@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hdee8i6gluxr"
-path.s3tc="res://.godot/imported/AsphaltDamaged.jpg-3f433295c3938c6fd216fc38d4191678.s3tc.ctex"
+path.s3tc="res://.godot/imported/AsphaltDamaged.jpg-3ca499d9bbb4a8f7f2ca4d1d45762e64.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Gas_station/textures/AsphaltDamaged.jpg"
-dest_files=["res://.godot/imported/AsphaltDamaged.jpg-3f433295c3938c6fd216fc38d4191678.s3tc.ctex"]
+source_file="res://assets/Gas_station/Textures/AsphaltDamaged.jpg"
+dest_files=["res://.godot/imported/AsphaltDamaged.jpg-3ca499d9bbb4a8f7f2ca4d1d45762e64.s3tc.ctex"]
 
 [params]
 

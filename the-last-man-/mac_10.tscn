@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://cgdcf7d5cyolo"]
+
+[ext_resource type="PackedScene" uid="uid://deveaby73t84i" path="res://Normal version Color and NormalMap/Weapons/mac10.glb" id="1_uw3un"]
+[ext_resource type="Shader" uid="uid://b1of64xpgnqyh" path="res://gun_shader.gdshader" id="2_118as"]
+[ext_resource type="Script" uid="uid://f46jdcnvn7us" path="res://gun.gd" id="2_gpf5l"]
+[ext_resource type="Texture2D" uid="uid://bnfvmyurrdvmc" path="res://Normal version Color and NormalMap/Weapons/mac10_mac10mat_color.png" id="3_gpf5l"]
+[ext_resource type="Texture2D" uid="uid://mefq1lcuemrl" path="res://Normal version Color and NormalMap/Weapons/mac10_mac10mat_normal.png" id="4_hvd7x"]
+[ext_resource type="Shader" uid="uid://crjbhie1xrf4s" path="res://muzzle_shader.gdshader" id="5_rcsjl"]
+[ext_resource type="AudioStream" uid="uid://b1lt6htgglvhh" path="res://Sound/gunempty_05.ogg" id="6_118as"]
+[ext_resource type="AudioStream" uid="uid://7ni4accuv3r4" path="res://Sound/reload_11.ogg" id="7_gpf5l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gcvpg"]
+render_priority = 0
+shader = ExtResource("2_118as")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("3_gpf5l")
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.5
+shader_parameter/roughness = 0.5
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/roughness_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/texture_normal = ExtResource("4_hvd7x")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_14s07"]
+angle_min = -69.99999
+angle_max = 70.000015
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="Gradient" id="Gradient_63ar3"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 0.85, 0, 0.98039216, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7s0rq"]
+gradient = SubResource("Gradient_63ar3")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y2mtp"]
+render_priority = 0
+shader = ExtResource("5_rcsjl")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = SubResource("GradientTexture2D_7s0rq")
+shader_parameter/specular = 0.0
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 0.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/roughness_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_r7fmr"]
+material = SubResource("ShaderMaterial_y2mtp")
+size = Vector2(0.05, 0.05)
+
+[node name="mac10" unique_id=496420819 instance=ExtResource("1_uw3un")]
+script = ExtResource("2_gpf5l")
+damage = 10.0
+fire_rate = 0.05
+mag_size = 40
+reload_time = 1.5
+camera_shake = 0.2
+normal_speed = 4.5
+aim_speed = 3.0
+height_offset = 0.07
+
+[node name="mac10" parent="." index="0" unique_id=175262683]
+surface_material_override/0 = SubResource("ShaderMaterial_gcvpg")
+
+[node name="mac10bt_low" parent="mac10" index="0" unique_id=1874519318]
+surface_material_override/0 = SubResource("ShaderMaterial_gcvpg")
+
+[node name="mac10derriere_low" parent="mac10" index="1" unique_id=1612603211]
+surface_material_override/0 = SubResource("ShaderMaterial_gcvpg")
+
+[node name="mac10magazine_low" parent="mac10" index="2" unique_id=850884294]
+surface_material_override/0 = SubResource("ShaderMaterial_gcvpg")
+
+[node name="mac10rond_low" parent="mac10" index="3" unique_id=1724809888]
+surface_material_override/0 = SubResource("ShaderMaterial_gcvpg")
+
+[node name="mac10trigger_low" parent="mac10" index="4" unique_id=1537740558]
+surface_material_override/0 = SubResource("ShaderMaterial_gcvpg")
+
+[node name="Muzzle" type="GPUParticles3D" parent="." index="1" unique_id=120807009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13013062, -0.0021832995, 0)
+emitting = false
+lifetime = 0.05
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_14s07")
+draw_pass_1 = SubResource("QuadMesh_r7fmr")
+
+[node name="Gunempty" type="AudioStreamPlayer" parent="Muzzle" index="0" unique_id=1510978487]
+stream = ExtResource("6_118as")
+
+[node name="Reload" type="AudioStreamPlayer" parent="Muzzle" index="1" unique_id=1211486596]
+stream = ExtResource("7_gpf5l")

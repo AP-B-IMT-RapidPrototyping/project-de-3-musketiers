@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d02rc7un0y66f"
-path.s3tc="res://.godot/imported/ICE.png-18d380fcf7808ffba4bf248e62e02a09.s3tc.ctex"
+path.s3tc="res://.godot/imported/ICE.png-852f52113a2991d02ca8241d95581e07.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Gas_station/textures/ICE.png"
-dest_files=["res://.godot/imported/ICE.png-18d380fcf7808ffba4bf248e62e02a09.s3tc.ctex"]
+source_file="res://assets/Gas_station/Textures/ICE.png"
+dest_files=["res://.godot/imported/ICE.png-852f52113a2991d02ca8241d95581e07.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://krt6ymy4ce74"
-path.s3tc="res://.godot/imported/Sign.jpg-98b359d9364c05c8fe1cd4874e9cdfd8.s3tc.ctex"
+path.s3tc="res://.godot/imported/Sign.jpg-3570eaf6d4752bdb29f74d05646ce186.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Gas_station/textures/Sign.jpg"
-dest_files=["res://.godot/imported/Sign.jpg-98b359d9364c05c8fe1cd4874e9cdfd8.s3tc.ctex"]
+source_file="res://assets/Gas_station/Textures/Sign.jpg"
+dest_files=["res://.godot/imported/Sign.jpg-3570eaf6d4752bdb29f74d05646ce186.s3tc.ctex"]
 
 [params]
 

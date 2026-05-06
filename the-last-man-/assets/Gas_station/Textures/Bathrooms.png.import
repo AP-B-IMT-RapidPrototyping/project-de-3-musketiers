@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bx8qo8xifnrex"
-path.s3tc="res://.godot/imported/Bathrooms.png-a76f88e7222992f2919e7bf813305abf.s3tc.ctex"
+path.s3tc="res://.godot/imported/Bathrooms.png-2977bdc5ca48e321875c822967cdb8d4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Gas_station/textures/Bathrooms.png"
-dest_files=["res://.godot/imported/Bathrooms.png-a76f88e7222992f2919e7bf813305abf.s3tc.ctex"]
+source_file="res://assets/Gas_station/Textures/Bathrooms.png"
+dest_files=["res://.godot/imported/Bathrooms.png-2977bdc5ca48e321875c822967cdb8d4.s3tc.ctex"]
 
 [params]
 

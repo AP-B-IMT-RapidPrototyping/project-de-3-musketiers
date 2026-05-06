@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2fclvjmscnsc"
-path.s3tc="res://.godot/imported/Bush.png-61ba4268a8de3cc50a6dab673bfed18b.s3tc.ctex"
+path.s3tc="res://.godot/imported/Bush.png-52929059556de7ae62db2db67dc38a78.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Gas_station/textures/Bush.png"
-dest_files=["res://.godot/imported/Bush.png-61ba4268a8de3cc50a6dab673bfed18b.s3tc.ctex"]
+source_file="res://assets/Gas_station/Textures/Bush.png"
+dest_files=["res://.godot/imported/Bush.png-52929059556de7ae62db2db67dc38a78.s3tc.ctex"]
 
 [params]
 
